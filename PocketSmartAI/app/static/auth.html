@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Login - PocketSmart AI</title><link rel="stylesheet" href="/static/css/styles.css"></head>
+<body><header class="nav"><a class="brand" href="/">PocketSmart AI</a></header>
+<main class="container narrow">
+<section class="card">
+<h1>Login</h1>
+<form id="loginForm">
+<label>Username<input id="loginUsername" required></label>
+<label>Password<input id="loginPassword" type="password" required></label>
+<button class="btn primary">Login</button>
+</form>
+</section>
+<section class="card">
+<h2>Create account</h2>
+<form id="registerForm">
+<label>Username<input id="regUsername" minlength="3" required></label>
+<label>Email<input id="regEmail" type="email" required></label>
+<label>Password<input id="regPassword" type="password" minlength="8" required></label>
+<button class="btn">Register</button>
+</form>
+</section>
+<pre id="authMessage" class="message"></pre>
+</main><script src="/static/js/auth.js"></script></body></html>

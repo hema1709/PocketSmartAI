@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Planners - PocketSmart AI</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+    <header class="nav"><a class="brand" href="/">PocketSmart AI</a>
+        <nav><a href="/static/history.html">History</a><button id="logoutBtn" class="link-button">Logout</button></nav>
+    </header>
+    <main class="container">
+        <h1>Budget planners</h1>
+        <p id="loginState"></p>
+        <div class="tabs">
+            <button class="tab active" data-target="homePanel">Home</button>
+            <button class="tab" data-target="partyPanel">Party</button>
+            <button class="tab" data-target="jewelryPanel">Jewelry</button>
+        </div>
+
+        <section id="homePanel" class="card panel">
+            <h2>Home Interior Planner</h2>
+            <form id="homeForm">
+                <label>Budget (₹)<input name="budget" type="number" min="1" required></label>
+                <label>Room type<input name="room_type" placeholder="Living Room" required></label>
+                <label>Style<input name="style" value="modern"></label>
+                <label>Items (one per line: category,quantity,notes)<textarea name="items_text"
+                        placeholder="Ceiling fan,2,energy efficient&#10;Wall art,3,neutral tones"></textarea></label>
+                <button class="btn primary">Generate recommendations</button>
+            </form>
+        </section>
+
+        <section id="partyPanel" class="card panel hidden">
+            <h2>Party Planner</h2>
+            <form id="partyForm">
+                <label>Budget (₹)<input name="budget" type="number" min="1" required></label>
+                <label>Guests<input name="guest_count" type="number" min="1" required></label>
+                <label>Event type<input name="event_type" placeholder="Birthday" required></label>
+                <label>Venue<input name="venue"></label>
+                <label>City<input name="city" placeholder="Coimbatore"></label>
+                <label>Preferences<textarea name="preferences"></textarea></label>
+                <button class="btn primary">Generate recommendations</button>
+            </form>
+        </section>
+
+        <section id="jewelryPanel" class="card panel hidden">
+            <h2>Jewelry Planner</h2>
+            <form id="jewelryForm">
+                <label>Budget (₹)<input name="budget" type="number" min="1" required></label>
+                <label>Occasion<input name="occasion" placeholder="Wedding" required></label>
+                <label>Style<input name="style" value="elegant"></label>
+                <label>Outfit color<input name="outfit_color" placeholder="Maroon"></label>
+                <label>Notes<textarea name="notes"></textarea></label>
+                <label>Optional outfit image<input name="image" type="file"
+                        accept="image/png,image/jpeg,image/webp"></label>
+                <button class="btn primary">Generate recommendations</button>
+            </form>
+        </section>
+
+        <section id="result" class="result"></section>
+    </main>
+    <script src="/static/js/app.js"></script>
+</body>
+
+</html>
